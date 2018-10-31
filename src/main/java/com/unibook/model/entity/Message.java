@@ -1,4 +1,4 @@
-package model.entity;
+package com.unibook.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

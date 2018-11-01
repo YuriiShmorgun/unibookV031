@@ -1,5 +1,6 @@
 package com.unibook.controller;
 
+import com.unibook.model.entity.Message;
 import com.unibook.model.repository.IMessageRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,11 +13,13 @@ import java.util.Map;
 public class GreetingController {
 
     @Autowired
-    IMessageRepo iMessageRepo;
+    IMessageRepo messageRepo;
 
     @GetMapping("/list")
     public String list (
         Map<String, Object> model){
+        Iterable<Message> messageList = messageRepo.findAll();
+        model.put("messages", messageList);
         return "list";
     }
 

@@ -6,5 +6,24 @@
 </head>
 <body>
     <div>Hello, let`s code</div>
+
+    <div>
+        <form method="post">
+            <input type="text" name="message" placeholder="Enter message">
+            <input type="text" name="tag" placeholder="Enter tag">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <div>
+        Message List
+    </div>
+    {{#messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>message</span>
+        <i>{{tag}}</i>
+    </div>
+    {{/messages}}
 </body>
 </html>

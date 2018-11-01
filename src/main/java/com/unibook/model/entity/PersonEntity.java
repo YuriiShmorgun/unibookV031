@@ -13,7 +13,7 @@ import java.util.Objects;
 @Entity
 @Getter
 @Setter
-public abstract class PersonEntity {
+public class PersonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

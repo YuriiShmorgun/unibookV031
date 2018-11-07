@@ -25,6 +25,18 @@ public class Person {
     public Person() {
     }
 
+    public Person(String person_name_ua, String person_name_eng, String person_surname_ua, String person_surname_eng, LocalDate person_birthday, String person_phone, String person_email, String person_address_ua, String person_address_eng) {
+        this.person_name_ua = person_name_ua;
+        this.person_name_eng = person_name_eng;
+        this.person_surname_ua = person_surname_ua;
+        this.person_surname_eng = person_surname_eng;
+        this.person_birthday = person_birthday;
+        this.person_phone = person_phone;
+        this.person_email = person_email;
+        this.person_address_ua = person_address_ua;
+        this.person_address_eng = person_address_eng;
+    }
+
     public Long getId() {
         return id;
     }

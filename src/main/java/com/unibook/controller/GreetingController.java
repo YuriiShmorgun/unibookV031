@@ -1,7 +1,9 @@
 package com.unibook.controller;
 
 import com.unibook.model.entity.Message;
+import com.unibook.model.entity.Person;
 import com.unibook.model.repository.IMessageRepo;
+import com.unibook.model.repository.IPersonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +16,13 @@ import java.util.Map;
 public class GreetingController {
 
     @Autowired
-    IMessageRepo messageRepo;
+    private IMessageRepo messageRepo;
+    private IPersonRepo personRepo;
+
+    @GetMapping
+    public String index(Map<String, Object> model){
+        return "index";
+    }
 
     @GetMapping("/list")
     public String list (
@@ -25,6 +33,13 @@ public class GreetingController {
     }
 
 
+    @GetMapping("/personList")
+    public String personList (
+            Map<String, Object> model){
+        Iterable<Person> list = personRepo.findAll();
+        model.put("personList", list);
+        return "personList";
+    }
 
     @GetMapping("/greeting")
     public String greeting(

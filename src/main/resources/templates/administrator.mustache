@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+    <div>
+        <form method="post"> <!--action="addSubjectType"-->
+            <input type="text" name="subjectTypeNameUa" placeholder="Введите тип (Укр)">
+            <input type="text" name="subjectTypeNameEng" placeholder="Введите тип (Eng)">
+            <input type="text" name="subjectTypeNameShortUa" placeholder="Сокращенно тип (Укр)">
+            <input type="text" name="subjectTypeNameShortEng" placeholder="Сокращенно тип (Eng)">
+            <button type="submit"> Добавить</button>
+        </form>
+    </div>
+    <div>
+        <form method="post" action="filter_subject_type">
+            <input type="text" name="filter_subject_type">
+            <button type="submit">Найти</button>
+        </form>
+    </div>
+    <div>Виды занятий</div>
+    {{#subjectTypeList}}
+    <div>
+        <span>{{subjectTypeNameUa}}</span>
+        <span>{{subjectTypeNameEng}}</span>
+        <span>{{subjectTypeNameShortUa}}</span>
+        <span>{{subjectTypeNameShortEng}}</span>
+    </div>
+    {{/subjectTypeList}}
 
 </body>
 </html>

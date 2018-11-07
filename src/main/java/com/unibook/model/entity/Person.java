@@ -1,4 +1,4 @@
-package com.unibook.model.entity.newEntity;
+package com.unibook.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.time.LocalDate;
 
 @Entity
-public class PersonEntity {
+public class Person {
 
     @Id
     @GeneratedValue(strategy =GenerationType.AUTO)
@@ -22,7 +22,7 @@ public class PersonEntity {
     private String person_address_ua;
     private String person_address_eng;
 
-    public PersonEntity() {
+    public Person() {
     }
 
     public Long getId() {

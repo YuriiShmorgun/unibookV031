@@ -1,6 +1,7 @@
 package com.unibook.model.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 public class SubjectType {
 
     @Id
@@ -22,8 +24,7 @@ public class SubjectType {
     private String subjectTypeNameShortUa;
     private String subjectTypeNameShortEng;
 
-    public SubjectType() {
-    }
+
 
     public SubjectType(String subjectTypeNameUa, String subjectTypeNameEng, String subjectTypeNameShortUa, String subjectTypeNameShortEng) {
         this.subjectTypeNameUa = subjectTypeNameUa;

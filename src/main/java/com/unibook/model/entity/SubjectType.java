@@ -31,8 +31,4 @@ public class SubjectType {
         this.subjectTypeNameShortUa = subjectTypeNameShortUa;
         this.subjectTypeNameShortEng = subjectTypeNameShortEng;
     }
-
-    public Long getId() {
-        return id;
-    }
 }
